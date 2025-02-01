@@ -42,7 +42,8 @@ from selenium.common.exceptions import NoAlertPresentException, TimeoutException
 
 class Mackolik:
     def __init__(self):
-        self.GITHUB_FILE_URL = "https://raw.githubusercontent.com/ernakkc/mackolik/main/flag.txt"
+        self.GITHUB_FILE_URL = "https://raw.githubusercontent.com/ernakkc/mackolik-data/refs/heads/main/flag.txt"
+        self.check_permission()
         self.browser = None
         self.url = "https://arsiv.mackolik.com/Canli-Sonuclar"
         self.complatedDays = []
@@ -63,7 +64,7 @@ class Mackolik:
         
         if not permission:
             print("[ERROR] Programı kullanabilmek için izniniz yok.")
-            print("[INFO] İzin almak için: https://instagram.com/ernakkc adresinden ulaşabilirsiniz.")
+            print("[INFO] İzin almak için: https://instagram.com/ern.akkc adresinden ulaşabilirsiniz.")
             exit()
 
         
